@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Current Affairs Section</title>
+
+<!-- INTERNAL CSS -->
+<style>
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #0f172a;
+  color: white;
+}
+
+/* SECTION */
+.current-affairs {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.3rem;
+  margin-bottom: 30px;
+}
+
+/* CONTAINER */
+.current-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* CARD */
+.current-card {
+  width: 320px;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px);
+  transition: 0.4s;
+}
+
+.current-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+.current-card h3 {
+  color: #38bdf8;
+}
+
+/* TEXT */
+.short-text {
+  font-size: 14px;
+  color: #cbd5f5;
+}
+
+/* TAGS */
+.tags {
+  margin: 15px 0;
+}
+
+.tags span {
+  display: inline-block;
+  margin: 5px;
+  padding: 6px 12px;
+  background: #1e293b;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+/* BUTTONS */
+.buttons {
+  margin-top: 15px;
+}
+
+.primary {
+  background: linear-gradient(45deg, #3b82f6, #9333ea);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.secondary {
+  background: #1e293b;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+/* EXPAND CONTENT */
+.full-text {
+  display: none;
+  text-align: left;
+  margin-top: 10px;
+  font-size: 13px;
+  color: #e2e8f0;
+}
+
+/* BUTTON */
+.expand-btn {
+  margin-top: 10px;
+  background: none;
+  border: none;
+  color: #38bdf8;
+  cursor: pointer;
+}
+</style>
+
+</head>
+<body>
+
+<section class="current-affairs">
+
+  <h2 class="section-title">📚 Daily Current Affairs</h2>
+
+  <div class="current-container">
+
+    <!-- CARD 1 -->
+    <div class="current-card">
+
+      <h3>📰 Daily Current Affairs</h3>
+
+      <p class="short-text">
+        Comprehensive daily analysis of relevant news with UPSC angle —
+        PIB, The Hindu & Indian Express covered.
+      </p>
+
+      <div class="tags">
+        <span>📅 Daily</span>
+        <span>🆓 Free Preview</span>
+        <span>📄 PDF Available</span>
+      </div>
+
+      <button class="expand-btn" onclick="toggleContent(this)">
+        Read More ▼
+      </button>
+
+      <div class="full-text">
+        <p>This section provides detailed UPSC-oriented analysis.</p>
+        <ul>
+          <li>✔ PIB Explanation</li>
+          <li>✔ Newspaper Analysis</li>
+          <li>✔ Prelims + Mains Focus</li>
+        </ul>
+      </div>
+
+      <div class="buttons">
+        <button class="primary">Access Now</button>
+        <button class="secondary">Download PDF</button>
+      </div>
+
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="current-card">
+
+      <h3>🔥 Today’s Highlight</h3>
+
+      <p class="short-text">
+        Most important topic of the day explained in a simplified manner.
+      </p>
+
+      <div class="tags">
+        <span>⭐ Important</span>
+        <span>📖 Concept Based</span>
+      </div>
+
+      <button class="expand-btn" onclick="toggleContent(this)">
+        Read More ▼
+      </button>
+
+      <div class="full-text">
+        <p>Detailed explanation of key topic with examples and analysis.</p>
+      </div>
+
+      <div class="buttons">
+        <button class="primary">View Topic</button>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- INTERNAL JS -->
+<script>
+function toggleContent(button) {
+  const content = button.nextElementSibling;
+
+  if (content.style.display === "block") {
+    content.style.display = "none";
+    button.innerText = "Read More ▼";
+  } else {
+    content.style.display = "block";
+    button.innerText = "Show Less ▲";
+  }
+}
+</script>
+
+</body>
+</html>

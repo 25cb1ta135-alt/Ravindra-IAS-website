@@ -1,0 +1,3160 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ravindra IAS — Your Journey to IAS Starts Here</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=DM+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+    /* =========================
+   GLOBAL RESPONSIVE FIX
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* IMAGES RESPONSIVE */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* CONTAINER FIX */
+.container, section {
+  width: 100%;
+  padding: 20px;
+}
+
+/* =========================
+   NAVBAR RESPONSIVE
+========================= */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(1.8rem, 5vw, 3rem);
+}
+
+.hero p {
+  font-size: clamp(1rem, 3vw, 1.2rem);
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 50px 20px;
+  }
+}
+
+/* =========================
+   GRID FIX (COURSES ETC)
+========================= */
+.course-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+  .course-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .course-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* =========================
+   COUNTER SECTION
+========================= */
+.counter-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.counter {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  padding: 12px 20px;
+  font-size: clamp(0.8rem, 2.5vw, 1rem);
+  cursor: pointer;
+}
+
+/* =========================
+   TEXT RESPONSIVE
+========================= */
+h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+h3 {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+p {
+  font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+
+}
+/* =========================
+   CHATBOT FIX
+========================= */
+.chatbot {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+}
+
+.chatbox {
+  width: 90vw;
+  max-width: 300px;
+}
+
+/* =========================
+   POPUP FIX
+========================= */
+.popup-content {
+  width: 90%;
+  max-width: 350px;
+}
+
+/* =========================
+   SCROLL FIX
+========================= */
+.scroll {
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* =========================
+   EXTRA MOBILE IMPROVEMENTS
+========================= */
+@media (max-width: 480px) {
+  
+  body {
+    font-size: 14px;
+  }
+
+  .navbar h2 {
+    font-size: 18px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+}
+/* ===== CSS VARIABLES ===== */
+:root {
+  --bg-primary: #f8f5f0;
+  --bg-secondary: #ffffff;
+  --bg-tertiary: #f0ebe3;
+  --text-primary: #0d1117;
+  --text-secondary: #4a4a5a;
+  --text-muted: #888899;
+  --accent-gold: #c9a84c;
+  --accent-gold-light: #e8c97e;
+  --accent-navy: #0f2044;
+  --accent-navy-mid: #1a3460;
+  --accent-crimson: #8b1a2f;
+  --glass-bg: rgba(255,255,255,0.7);
+  --glass-border: rgba(201,168,76,0.2);
+  --shadow-soft: 0 8px 40px rgba(15,32,68,0.08);
+  --shadow-gold: 0 8px 30px rgba(201,168,76,0.25);
+  --shadow-hover: 0 20px 60px rgba(15,32,68,0.15);
+  --border-radius: 16px;
+  --transition: all 0.35s cubic-bezier(0.4,0,0.2,1);
+  --navbar-height: 72px;
+  --font-display: 'Playfair Display', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #070d1a;
+  --bg-secondary: #0d1b2e;
+  --bg-tertiary: #111d30;
+  --text-primary: #f0ead8;
+  --text-secondary: #b8b0a0;
+  --text-muted: #666675;
+  --glass-bg: rgba(13,27,46,0.8);
+  --glass-border: rgba(201,168,76,0.3);
+  --shadow-soft: 0 8px 40px rgba(0,0,0,0.3);
+  --shadow-hover: 0 20px 60px rgba(0,0,0,0.4);
+}
+
+/* ===== RESET & BASE ===== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; font-size: 16px; }
+body {
+  font-family: var(--font-body);
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background 0.4s ease, color 0.4s ease;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; border: none; background: none; font-family: var(--font-body); }
+ul { list-style: none; }
+section { padding: 100px 0; }
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--accent-gold); border-radius: 3px; }
+
+/* ===== CONTAINER ===== */
+.container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  display: block;
+  margin-bottom: 12px;
+}
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+.section-sub {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  max-width: 560px;
+  line-height: 1.7;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--navbar-height);
+  z-index: 1000;
+  transition: var(--transition);
+  padding: 0 24px;
+}
+.navbar.scrolled {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--glass-border);
+  box-shadow: var(--shadow-soft);
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.nav-logo {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.logo-main {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--accent-navy);
+  letter-spacing: -0.5px;
+}
+[data-theme="dark"] .logo-main { color: var(--accent-gold-light); }
+.logo-tag {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  margin-top: 2px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav-links a {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: var(--transition);
+  position: relative;
+}
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 4px; left: 50%;
+  transform: translateX(-50%);
+  width: 0; height: 2px;
+  background: var(--accent-gold);
+  border-radius: 1px;
+  transition: width 0.3s ease;
+}
+.nav-links a:hover::after { width: 70%; }
+.nav-links a:hover { color: var(--accent-gold); }
+.nav-actions { display: flex; align-items: center; gap: 12px; }
+.btn-enroll {
+  background: linear-gradient(135deg, var(--accent-gold), #a8822a);
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 10px 22px;
+  border-radius: 50px;
+  transition: var(--transition);
+  box-shadow: var(--shadow-gold);
+  white-space: nowrap;
+}
+.btn-enroll:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(201,168,76,0.4); }
+.dark-toggle {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  transition: var(--transition);
+  border: 1px solid var(--glass-border);
+}
+.dark-toggle:hover { color: var(--accent-gold); transform: rotate(20deg); }
+.hamburger {
+  display: none;
+  width: 40px; height: 40px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border-radius: 8px;
+  background: var(--bg-tertiary);
+  transition: var(--transition);
+}
+.hamburger span {
+  width: 22px; height: 2px;
+  background: var(--text-primary);
+  border-radius: 1px;
+  transition: var(--transition);
+}
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: var(--navbar-height);
+  left: 0; right: 0;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--glass-border);
+  padding: 20px 24px 28px;
+  z-index: 999;
+  box-shadow: var(--shadow-soft);
+  transform: translateY(-100%);
+  opacity: 0;
+  transition: var(--transition);
+}
+.mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+}
+.mobile-menu a {
+  display: block;
+  padding: 12px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--glass-border);
+  transition: var(--transition);
+}
+.mobile-menu a:hover { color: var(--accent-gold); padding-left: 8px; }
+.mobile-menu .btn-enroll { display: inline-block; margin-top: 16px; }
+
+/* ===== LOGIN MODAL ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(7,13,26,0.75);
+  backdrop-filter: blur(10px);
+  z-index: 9000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.modal-overlay.hidden { opacity: 0; pointer-events: none; }
+.modal-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 48px 40px;
+  width: 90%;
+  max-width: 420px;
+  position: relative;
+  box-shadow: 0 40px 120px rgba(0,0,0,0.25);
+  animation: modalIn 0.4s cubic-bezier(0.34,1.56,0.64,1);
+}
+@keyframes modalIn {
+  from { transform: scale(0.8) translateY(20px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+.modal-close {
+  position: absolute;
+  top: 16px; right: 16px;
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+.modal-close:hover { background: var(--accent-gold); color: white; }
+.modal-logo {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--accent-navy);
+  margin-bottom: 4px;
+}
+[data-theme="dark"] .modal-logo { color: var(--accent-gold-light); }
+.modal-subtitle { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 28px; }
+.form-group { margin-bottom: 16px; }
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg-tertiary);
+  border: 1.5px solid var(--glass-border);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  transition: var(--transition);
+  outline: none;
+}
+.form-group input:focus {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+}
+.btn-modal-submit {
+  width: 100%;
+  padding: 13px;
+  background: linear-gradient(135deg, var(--accent-navy), var(--accent-navy-mid));
+  color: white;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: 10px;
+  margin-top: 8px;
+  transition: var(--transition);
+}
+.btn-modal-submit:hover { transform: translateY(-2px); box-shadow: var(--shadow-soft); }
+.modal-skip {
+  display: block;
+  text-align: center;
+  margin-top: 14px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: var(--transition);
+}
+.modal-skip:hover { color: var(--accent-gold); }
+
+/* ===== HERO ===== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding-top: var(--navbar-height);
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 50%, rgba(201,168,76,0.12) 0%, transparent 70%),
+    radial-gradient(ellipse 60% 80% at 10% 80%, rgba(15,32,68,0.15) 0%, transparent 60%),
+    linear-gradient(160deg, var(--bg-primary) 0%, var(--bg-tertiary) 100%);
+  z-index: 0;
+}
+.hero-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--accent-gold) 1px, transparent 1px);
+  background-size: 40px 40px;
+  opacity: 0.08;
+  z-index: 0;
+}
+.hero-inner {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  width: 100%;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(201,168,76,0.12);
+  border: 1px solid rgba(201,168,76,0.3);
+  padding: 6px 14px 6px 6px;
+  border-radius: 50px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  margin-bottom: 24px;
+  animation: fadeInUp 0.6s ease forwards;
+}
+.hero-badge span:first-child {
+  background: var(--accent-gold);
+  color: white;
+  padding: 2px 8px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+}
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  animation: fadeInUp 0.6s ease 0.1s both;
+}
+.hero-title .highlight {
+  background: linear-gradient(135deg, var(--accent-gold), #e8882a);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-sub {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 36px;
+  max-width: 480px;
+  animation: fadeInUp 0.6s ease 0.2s both;
+}
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  animation: fadeInUp 0.6s ease 0.3s both;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, var(--accent-navy), var(--accent-navy-mid));
+  color: white;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: var(--shadow-soft);
+}
+.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 16px 50px rgba(15,32,68,0.3); }
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--text-primary);
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: 1.5px solid var(--glass-border);
+  transition: var(--transition);
+}
+.btn-secondary:hover { border-color: var(--accent-gold); color: var(--accent-gold); transform: translateY(-3px); }
+.hero-stats {
+  display: flex;
+  gap: 28px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid var(--glass-border);
+  animation: fadeInUp 0.6s ease 0.4s both;
+}
+.hero-stat .num {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+}
+.hero-stat .label {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.hero-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeInRight 0.8s ease 0.2s both;
+}
+.hero-card-main {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: var(--shadow-soft);
+}
+.hero-card-main h3 {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.upsc-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.upsc-step {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: var(--bg-tertiary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: var(--transition);
+}
+.upsc-step:hover { background: rgba(201,168,76,0.1); border-left: 3px solid var(--accent-gold); padding-left: 11px; }
+.step-num {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-gold), #a8822a);
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.hero-cards-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.mini-stat-card {
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+.mini-stat-card .n {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+}
+.mini-stat-card .l {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+/* ===== ABOUT ===== */
+.about { background: var(--bg-secondary); }
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.about-text .section-title { margin-bottom: 20px; }
+.about-text p {
+  font-size: 0.975rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+.about-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 32px;
+}
+.about-card {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  transition: var(--transition);
+}
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent-gold);
+}
+.about-card .icon {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+.about-card h4 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.about-card p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0;
+  line-height: 1.5;
+}
+.about-visual {
+  position: relative;
+}
+.about-big-card {
+  background: linear-gradient(135deg, var(--accent-navy) 0%, var(--accent-navy-mid) 100%);
+  border-radius: 24px;
+  padding: 48px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.about-big-card::before {
+  content: '';
+  position: absolute;
+  top: -30px; right: -30px;
+  width: 150px; height: 150px;
+  border-radius: 50%;
+  background: rgba(201,168,76,0.15);
+}
+.about-big-card .tagline {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent-gold-light);
+  margin-bottom: 16px;
+  display: block;
+}
+.about-big-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.about-big-card p {
+  font-size: 0.9rem;
+  line-height: 1.7;
+  opacity: 0.85;
+  margin-bottom: 24px;
+}
+.about-quote {
+  background: rgba(201,168,76,0.15);
+  border-left: 3px solid var(--accent-gold);
+  padding: 16px;
+  border-radius: 0 10px 10px 0;
+  font-size: 0.9rem;
+  font-style: italic;
+  line-height: 1.6;
+}
+.about-founder {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.founder-avatar {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-gold), #a8822a);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: white;
+  flex-shrink: 0;
+}
+.founder-info h5 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+.founder-info span {
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+/* ===== COURSES ===== */
+.courses { background: var(--bg-primary); }
+.courses-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.courses-header .section-sub { margin: 0 auto; }
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+.course-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 36px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.course-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-gold), #e8882a);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+.course-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
+.course-card:hover::before { transform: scaleX(1); }
+.course-card.featured {
+  background: linear-gradient(135deg, var(--accent-navy) 0%, #1e3d70 100%);
+  color: white;
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.course-tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 16px;
+}
+.course-card:not(.featured) .course-tag {
+  background: rgba(201,168,76,0.12);
+  color: var(--accent-gold);
+  border: 1px solid rgba(201,168,76,0.25);
+}
+.course-card.featured .course-tag {
+  background: rgba(201,168,76,0.2);
+  color: var(--accent-gold-light);
+  border: 1px solid rgba(201,168,76,0.3);
+}
+.course-title {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  line-height: 1.2;
+}
+.course-desc {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+.course-card.featured .course-desc { color: rgba(255,255,255,0.75); }
+.course-meta {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.course-meta span {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.course-card.featured .course-meta span { color: rgba(255,255,255,0.6); }
+.course-features { list-style: none; margin-bottom: 24px; }
+.course-features li {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.course-card.featured .course-features li { color: rgba(255,255,255,0.8); }
+.course-features li::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  flex-shrink: 0;
+}
+.btn-course {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.course-card:not(.featured) .btn-course {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1.5px solid var(--glass-border);
+}
+.course-card:not(.featured) .btn-course:hover {
+  background: var(--accent-gold);
+  color: white;
+  border-color: var(--accent-gold);
+}
+.course-card.featured .btn-course {
+  background: var(--accent-gold);
+  color: white;
+}
+.course-card.featured .btn-course:hover {
+  background: var(--accent-gold-light);
+  transform: translateY(-2px);
+}
+.course-visual-block {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.course-highlight-item {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.course-highlight-item .chi {
+  font-size: 1.4rem;
+  flex-shrink: 0;
+}
+.course-highlight-item h5 {
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.course-highlight-item p {
+  font-size: 0.78rem;
+  opacity: 0.65;
+  margin: 0;
+}
+
+/* ===== TIMELINE ===== */
+.timeline-section {
+  background: var(--bg-secondary);
+  overflow: hidden;
+}
+.timeline-header { text-align: center; margin-bottom: 70px; }
+.timeline-wrapper {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.timeline-line {
+  position: absolute;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-crimson), var(--accent-gold));
+  border-radius: 2px;
+}
+.timeline-steps {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+  position: relative;
+  z-index: 1;
+}
+.timeline-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.timeline-step.visible { opacity: 1; transform: translateY(0); }
+.ts-icon {
+  width: 72px; height: 72px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 3px solid var(--accent-gold);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+  box-shadow: 0 0 0 6px var(--bg-secondary);
+  position: relative;
+  transition: var(--transition);
+}
+.timeline-step:hover .ts-icon {
+  background: var(--accent-gold);
+  transform: scale(1.1);
+}
+.ts-content { text-align: center; }
+.ts-content h4 {
+  font-size: 0.875rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.ts-content p {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ===== RESOURCES ===== */
+.resources { background: var(--bg-primary); }
+.resources-header { margin-bottom: 48px; }
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.resource-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 28px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.resource-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-gold), #e8882a);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.resource-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+.resource-card:hover::after { transform: scaleX(1); }
+.resource-icon {
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05));
+  border: 1px solid rgba(201,168,76,0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.4rem;
+  margin-bottom: 18px;
+}
+.resource-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.resource-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+.resource-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+.resource-tags span {
+  font-size: 0.7rem;
+  padding: 3px 10px;
+  background: var(--bg-tertiary);
+  border-radius: 50px;
+  color: var(--text-muted);
+  border: 1px solid var(--glass-border);
+}
+.btn-resource {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-gold);
+  transition: var(--transition);
+}
+.btn-resource:hover { gap: 10px; }
+
+/* ===== RESULTS / TOPPERS ===== */
+.results { background: var(--bg-secondary); }
+.results-header { text-align: center; margin-bottom: 56px; }
+.toppers-slider-wrapper { position: relative; overflow: hidden; }
+.toppers-slider {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+.topper-card {
+  min-width: calc(33.333% - 14px);
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 32px;
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+.topper-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
+.topper-avatar {
+  width: 70px; height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-navy), var(--accent-navy-mid));
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-gold-light);
+  margin-bottom: 16px;
+  border: 3px solid var(--accent-gold);
+}
+.topper-rank {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--accent-gold), #a8822a);
+  color: white;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
+.topper-card h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.topper-card .batch {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+.topper-quote {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-style: italic;
+  line-height: 1.6;
+  padding-left: 12px;
+  border-left: 2px solid var(--accent-gold);
+}
+.slider-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 40px;
+}
+.slider-btn {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+.slider-btn:hover { background: var(--accent-gold); color: white; border-color: var(--accent-gold); }
+.slider-dots { display: flex; gap: 6px; }
+.slider-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--glass-border);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.slider-dot.active { background: var(--accent-gold); width: 24px; border-radius: 4px; }
+
+/* ===== WHY CHOOSE US ===== */
+.why { background: var(--bg-primary); }
+.why-header { text-align: center; margin-bottom: 56px; }
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.why-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 32px;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+.why-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 4px; height: 0;
+  background: linear-gradient(180deg, var(--accent-gold), #e8882a);
+  border-radius: 0 0 4px 4px;
+  transition: height 0.4s ease;
+}
+.why-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
+.why-card:hover::before { height: 100%; }
+.why-icon {
+  width: 60px; height: 60px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(201,168,76,0.05));
+  border: 1px solid rgba(201,168,76,0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  transition: var(--transition);
+}
+.why-card:hover .why-icon {
+  background: linear-gradient(135deg, var(--accent-gold), #a8822a);
+  border-color: var(--accent-gold);
+}
+.why-card h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.why-card p {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* ===== COUNTERS ===== */
+.counters { background: linear-gradient(135deg, var(--accent-navy) 0%, #1e3d70 100%); padding: 80px 0; }
+.counters-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+}
+.counter-item { color: white; }
+.counter-item .num {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 800;
+  color: var(--accent-gold-light);
+  display: block;
+  line-height: 1;
+}
+.counter-item .unit {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+}
+.counter-item .clabel {
+  font-size: 0.85rem;
+  opacity: 0.7;
+  margin-top: 6px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== MOTIVATION ===== */
+.motivation {
+  background: var(--bg-secondary);
+  position: relative;
+  overflow: hidden;
+}
+.motivation::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -100px;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,168,76,0.08), transparent 70%);
+}
+.motivation-header { text-align: center; margin-bottom: 56px; }
+.motivate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+.motivate-tip {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 28px;
+  transition: var(--transition);
+}
+.motivate-tip:hover { transform: translateY(-4px); box-shadow: var(--shadow-soft); }
+.motivate-tip .emoji { font-size: 2rem; margin-bottom: 12px; }
+.motivate-tip h4 {
+  font-size: 0.975rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.motivate-tip p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+.motivation-quote-box {
+  background: linear-gradient(135deg, var(--accent-navy), #1e3d70);
+  border-radius: 24px;
+  padding: 48px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+.motivation-quote-box::before {
+  content: '\201C';
+  position: absolute;
+  top: -20px; left: 20px;
+  font-size: 12rem;
+  font-family: var(--font-display);
+  color: rgba(201,168,76,0.15);
+  line-height: 1;
+}
+#motivate-quote {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  min-height: 80px;
+  transition: opacity 0.3s ease;
+}
+#motivate-author {
+  font-size: 0.875rem;
+  opacity: 0.65;
+  margin-bottom: 28px;
+}
+.btn-motivate {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-gold);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: var(--transition);
+}
+.btn-motivate:hover { transform: translateY(-3px); box-shadow: var(--shadow-gold); }
+
+/* ===== DOUBT SOLVER ===== */
+.doubt-section { background: var(--bg-primary); }
+.doubt-inner {
+  max-width: 780px;
+  margin: 0 auto;
+}
+.doubt-header { text-align: center; margin-bottom: 40px; }
+.doubt-chat-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+.doubt-chat-header {
+  background: linear-gradient(135deg, var(--accent-navy), #1e3d70);
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+}
+.doubt-chat-header .status-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #4ade80;
+  box-shadow: 0 0 0 3px rgba(74,222,128,0.2);
+  animation: pulse 2s infinite;
+}
+.doubt-chat-header span {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.doubt-chat-header .small {
+  font-size: 0.75rem;
+  opacity: 0.65;
+  font-weight: 400;
+  margin-left: auto;
+}
+.doubt-messages {
+  height: 300px;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.dmsg {
+  display: flex;
+  gap: 10px;
+  animation: fadeInUp 0.3s ease;
+}
+.dmsg.user { flex-direction: row-reverse; }
+.dmsg-avatar {
+  width: 34px; height: 34px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+.dmsg.bot .dmsg-avatar { background: linear-gradient(135deg, var(--accent-navy), #1e3d70); color: var(--accent-gold-light); }
+.dmsg.user .dmsg-avatar { background: var(--accent-gold); color: white; }
+.dmsg-bubble {
+  max-width: 75%;
+  padding: 10px 14px;
+  border-radius: 14px;
+  font-size: 0.875rem;
+  line-height: 1.55;
+}
+.dmsg.bot .dmsg-bubble {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  color: var(--text-primary);
+  border-bottom-left-radius: 4px;
+}
+.dmsg.user .dmsg-bubble {
+  background: linear-gradient(135deg, var(--accent-gold), #a8822a);
+  color: white;
+  border-bottom-right-radius: 4px;
+}
+.doubt-quick-qs {
+  padding: 0 20px 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.dq-btn {
+  font-size: 0.75rem;
+  padding: 5px 12px;
+  border: 1px solid var(--glass-border);
+  border-radius: 50px;
+  background: var(--bg-tertiary);
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+.dq-btn:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
+.doubt-input-row {
+  display: flex;
+  gap: 10px;
+  padding: 16px 20px;
+  border-top: 1px solid var(--glass-border);
+}
+.doubt-input {
+  flex: 1;
+  padding: 10px 16px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  border-radius: 50px;
+  font-size: 0.875rem;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  outline: none;
+  transition: var(--transition);
+}
+.doubt-input:focus { border-color: var(--accent-gold); }
+.doubt-send {
+  width: 42px; height: 42px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-gold), #a8822a);
+  color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem;
+  transition: var(--transition);
+}
+.doubt-send:hover { transform: scale(1.1); }
+
+/* ===== FAQ ===== */
+.faq { background: var(--bg-secondary); }
+.faq-inner {
+  max-width: 760px;
+  margin: 0 auto;
+}
+.faq-header { text-align: center; margin-bottom: 48px; }
+.faq-list { display: flex; flex-direction: column; gap: 12px; }
+.faq-item {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.faq-item.open { border-color: var(--accent-gold); box-shadow: var(--shadow-gold); }
+.faq-q {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  cursor: pointer;
+  transition: var(--transition);
+  gap: 12px;
+}
+.faq-q:hover { color: var(--accent-gold); }
+.faq-q span {
+  font-size: 0.975rem;
+  font-weight: 600;
+  flex: 1;
+}
+.faq-icon {
+  width: 30px; height: 30px;
+  border-radius: 50%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  transition: var(--transition);
+  flex-shrink: 0;
+}
+.faq-item.open .faq-icon {
+  background: var(--accent-gold);
+  color: white;
+  border-color: var(--accent-gold);
+  transform: rotate(45deg);
+}
+.faq-a {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.3s ease;
+  padding: 0 24px;
+}
+.faq-item.open .faq-a {
+  max-height: 200px;
+  padding-bottom: 20px;
+}
+.faq-a p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+/* ===== CONTACT ===== */
+.contact { background: var(--bg-primary); }
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 60px;
+  align-items: start;
+}
+.contact-left h2 {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  line-height: 1.2;
+}
+.contact-left p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+.trust-badges {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+.trust-badge .tb-icon {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  background: rgba(201,168,76,0.1);
+  border: 1px solid rgba(201,168,76,0.2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+.trust-badge span { font-weight: 600; color: var(--text-primary); }
+.contact-form {
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: var(--shadow-soft);
+}
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.contact-form .form-group { margin-bottom: 16px; }
+.contact-form .form-group label {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+.contact-form .form-group input,
+.contact-form .form-group select,
+.contact-form .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg-tertiary);
+  border: 1.5px solid var(--glass-border);
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  outline: none;
+  transition: var(--transition);
+  resize: none;
+}
+.contact-form .form-group input:focus,
+.contact-form .form-group select:focus,
+.contact-form .form-group textarea:focus {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 3px rgba(201,168,76,0.12);
+}
+.contact-form .form-group select { appearance: none; cursor: pointer; }
+.btn-submit {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, var(--accent-navy), var(--accent-navy-mid));
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 12px;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+.btn-submit:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(15,32,68,0.3); }
+.form-note {
+  text-align: center;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  margin-top: 14px;
+}
+.urgent-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(139,26,47,0.1);
+  border: 1px solid rgba(139,26,47,0.2);
+  color: var(--accent-crimson);
+  padding: 4px 12px;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+.urgent-badge .dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent-crimson);
+  animation: pulse 1.5s infinite;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: var(--accent-navy);
+  color: rgba(255,255,255,0.8);
+  padding: 70px 0 30px;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 50px;
+}
+.footer-brand .logo-main { color: var(--accent-gold-light); font-size: 1.6rem; }
+.footer-brand .logo-tag { color: rgba(201,168,76,0.6); }
+.footer-brand p {
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin-top: 12px;
+  opacity: 0.65;
+}
+.footer-social {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+.social-icon {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem;
+  color: rgba(255,255,255,0.65);
+  transition: var(--transition);
+}
+.social-icon:hover { background: var(--accent-gold); color: white; border-color: var(--accent-gold); }
+.footer-col h5 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--accent-gold-light);
+  margin-bottom: 16px;
+}
+.footer-col a {
+  display: block;
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.55);
+  padding: 4px 0;
+  transition: var(--transition);
+}
+.footer-col a:hover { color: var(--accent-gold-light); padding-left: 4px; }
+.footer-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.55);
+  padding: 4px 0;
+}
+.footer-contact-item i { color: var(--accent-gold); width: 16px; }
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.footer-bottom p { font-size: 0.8rem; opacity: 0.4; }
+.footer-bottom-links { display: flex; gap: 20px; }
+.footer-bottom-links a { font-size: 0.78rem; color: rgba(255,255,255,0.4); transition: var(--transition); }
+.footer-bottom-links a:hover { color: var(--accent-gold-light); }
+
+/* ===== CHATBOT ===== */
+.chatbot-toggle {
+  position: fixed;
+  bottom: 28px; right: 28px;
+  width: 60px; height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-navy), var(--accent-navy-mid));
+  color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 8px 30px rgba(15,32,68,0.4);
+  z-index: 2000;
+  transition: var(--transition);
+  border: 2px solid var(--accent-gold);
+}
+.chatbot-toggle:hover { transform: scale(1.1); }
+.chatbot-window {
+  position: fixed;
+  bottom: 100px; right: 28px;
+  width: 340px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.2);
+  z-index: 1999;
+  overflow: hidden;
+  display: none;
+  animation: chatIn 0.3s cubic-bezier(0.34,1.56,0.64,1);
+}
+@keyframes chatIn {
+  from { transform: scale(0.8) translateY(20px); opacity: 0; }
+  to { transform: scale(1) translateY(0); opacity: 1; }
+}
+.chatbot-window.open { display: block; }
+.chat-header {
+  background: linear-gradient(135deg, var(--accent-navy), #1e3d70);
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+}
+.chat-header .av {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: 0.875rem;
+  flex-shrink: 0;
+}
+.chat-header .info h5 { font-size: 0.875rem; font-weight: 600; }
+.chat-header .info span { font-size: 0.72rem; opacity: 0.65; }
+.chat-header .close-chat {
+  margin-left: auto;
+  font-size: 0.9rem;
+  opacity: 0.6;
+  color: white;
+  transition: var(--transition);
+}
+.chat-header .close-chat:hover { opacity: 1; }
+.chat-messages {
+  height: 240px;
+  overflow-y: auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.cmsg { display: flex; gap: 8px; }
+.cmsg.user { flex-direction: row-reverse; }
+.cmsg-bubble {
+  max-width: 80%;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+.cmsg.bot .cmsg-bubble { background: var(--bg-tertiary); color: var(--text-primary); border-bottom-left-radius: 3px; }
+.cmsg.user .cmsg-bubble { background: linear-gradient(135deg, var(--accent-gold), #a8822a); color: white; border-bottom-right-radius: 3px; }
+.chat-quick {
+  padding: 0 12px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.cq-btn {
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  border-radius: 50px;
+  color: var(--text-secondary);
+  transition: var(--transition);
+}
+.cq-btn:hover { border-color: var(--accent-gold); color: var(--accent-gold); }
+.chat-input-row {
+  display: flex;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid var(--glass-border);
+}
+.chat-input {
+  flex: 1;
+  padding: 8px 14px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--glass-border);
+  border-radius: 50px;
+  font-size: 0.82rem;
+  font-family: var(--font-body);
+  color: var(--text-primary);
+  outline: none;
+}
+.chat-send {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--accent-gold);
+  color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem;
+  transition: var(--transition);
+}
+.chat-send:hover { transform: scale(1.1); }
+.whatsapp-btn {
+  position: fixed;
+  bottom: 28px; right: 100px;
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: #25D366;
+  color: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.3rem;
+  box-shadow: 0 8px 25px rgba(37,211,102,0.35);
+  z-index: 2000;
+  transition: var(--transition);
+}
+.whatsapp-btn:hover { transform: scale(1.1); }
+
+/* ===== ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hero-visual { display: none; }
+  .about-grid { grid-template-columns: 1fr; gap: 40px; }
+  .courses-grid { grid-template-columns: 1fr; }
+  .course-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
+  .timeline-steps { grid-template-columns: repeat(3, 1fr); }
+  .timeline-line { width: 66%; }
+  .resources-grid { grid-template-columns: repeat(2, 1fr); }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
+  .counters-grid { grid-template-columns: repeat(2, 1fr); }
+  .motivate-grid { grid-template-columns: 1fr 1fr; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 768px) {
+  section { padding: 70px 0; }
+  .nav-links { display: none; }
+  .hamburger { display: flex; }
+  .mobile-menu { display: block; }
+  .hero-title { font-size: 2.2rem; }
+  .hero-stats { flex-wrap: wrap; gap: 16px; }
+  .timeline-steps { grid-template-columns: repeat(2, 1fr); gap: 30px; }
+  .timeline-line { display: none; }
+  .topper-card { min-width: calc(85% - 10px); }
+  .resources-grid { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
+  .motivate-grid { grid-template-columns: 1fr; }
+  .form-row { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .chatbot-window { width: 300px; right: 16px; bottom: 90px; }
+  .whatsapp-btn { right: 90px; bottom: 28px; }
+  .counters-grid { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .hero-title { font-size: 1.9rem; }
+  .hero-actions { flex-direction: column; }
+  .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+  .section-title { font-size: 1.8rem; }
+  .timeline-steps { grid-template-columns: 1fr 1fr; }
+  .counters-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .counter-item .num { font-size: 2.2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ===== LOGIN MODAL ===== -->
+<div class="modal-overlay" id="loginModal">
+  <div class="modal-card">
+    <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
+    <div class="modal-logo">Ravindra IAS</div>
+    <p class="modal-subtitle">Sign in to access your dashboard & resources</p>
+    <div class="form-group">
+      <label>Email Address</label>
+      <input type="email" placeholder="you@example.com">
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" placeholder="Enter password">
+    </div>
+    <button class="btn-modal-submit" onclick="closeModal()">Sign In to Dashboard</button>
+    <span class="modal-skip" onclick="closeModal()">Skip for now — just browsing →</span>
+  </div>
+</div>
+
+<!-- ===== NAVBAR ===== -->
+<nav class="navbar" id="navbar">
+  <div class="nav-inner">
+    <a href="#home" class="nav-logo">
+      <span class="logo-main">Ravindra IAS</span>
+      <span class="logo-tag">UPSC Excellence Since 2004</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#courses">Courses</a></li>
+      <li><a href="#results">Results</a></li>
+      <li><a href="#resources">Resources</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="dark-toggle" id="darkToggle" title="Toggle Theme"><i class="fas fa-moon"></i></button>
+      <a href="#contact" class="btn-enroll">Enroll Now</a>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#home" onclick="closeMobile()">Home</a>
+  <a href="#courses" onclick="closeMobile()">Courses</a>
+  <a href="#results" onclick="closeMobile()">Results</a>
+  <a href="#resources" onclick="closeMobile()">Resources</a>
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+  <a href="#contact" class="btn-enroll" onclick="closeMobile()">Enroll Now →</a>
+</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-dots"></div>
+  <div class="container">
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>🏆 #1 Ranked</span> UPSC Coaching in Delhi NCR
+        </div>
+        <h1 class="hero-title">
+          Your Journey to<br><span class="highlight">IAS Starts</span><br>Right Here.
+        </h1>
+        <p class="hero-sub">
+          Structured, proven guidance for Prelims, Mains & Interview — crafted by India's most trusted UPSC educators with over 20 years of excellence.
+        </p>
+        <div class="hero-actions">
+          <a href="#courses" class="btn-primary">
+            <i class="fas fa-graduation-cap"></i> Explore Courses
+          </a>
+          <a href="#contact" class="btn-secondary">
+            <i class="fas fa-comments"></i> Get Free Guidance
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="num" data-count="3200">0</div>
+            <div class="label">Selections</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num" data-count="20">0</div>
+            <div class="label">Years Experience</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num" data-count="48">0</div>
+            <div class="label">IAS/IPS Officers</div>
+          </div>
+          <div class="hero-stat">
+            <div class="num" data-count="97">0</div>
+            <div class="label">% Success Rate</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card-main">
+          <h3>🗺️ UPSC Roadmap at a Glance</h3>
+          <div class="upsc-steps">
+            <div class="upsc-step"><span class="step-num">1</span> Foundation & NCERTs (6 months)</div>
+            <div class="upsc-step"><span class="step-num">2</span> Prelims GS + CSAT Preparation</div>
+            <div class="upsc-step"><span class="step-num">3</span> Mains Answer Writing Mastery</div>
+            <div class="upsc-step"><span class="step-num">4</span> Optional Subject Specialization</div>
+            <div class="upsc-step"><span class="step-num">5</span> Interview Personality Test Prep</div>
+          </div>
+        </div>
+        <div class="hero-cards-row">
+          <div class="mini-stat-card">
+            <div class="n">500+</div>
+            <div class="l">Mock Tests per Year</div>
+          </div>
+          <div class="mini-stat-card">
+            <div class="n">40+</div>
+            <div class="l">Expert Faculty</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <span class="section-label">Our Story</span>
+        <h2 class="section-title">Built on Trust.<br>Driven by Results.</h2>
+        <p>Ravindra IAS was founded with a single, unwavering belief — that every sincere aspirant deserves world-class guidance. Since 2004, we have transformed thousands of ordinary students into extraordinary civil servants.</p>
+        <p>We don't just teach the syllabus. We build thinkers, leaders, and decision-makers — people who are ready not just for the exam, but for a lifetime of service to the nation.</p>
+        <div class="about-cards">
+          <div class="about-card">
+            <div class="icon">🎯</div>
+            <h4>Mission</h4>
+            <p>Make quality UPSC coaching accessible and transformation-focused</p>
+          </div>
+          <div class="about-card">
+            <div class="icon">🌟</div>
+            <h4>Vision</h4>
+            <p>Be India's most trusted civil services mentor by 2030</p>
+          </div>
+          <div class="about-card">
+            <div class="icon">📖</div>
+            <h4>Pedagogy</h4>
+            <p>Concept-first, answer-writing focused, mentored learning</p>
+          </div>
+          <div class="about-card">
+            <div class="icon">❤️</div>
+            <h4>Values</h4>
+            <p>Integrity, perseverance, and student-first approach</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-visual reveal">
+        <div class="about-big-card">
+          <span class="tagline">Why Aspirants Trust Us</span>
+          <h3>20 Years of<br>Proven Excellence</h3>
+          <p>From our first batch in 2004 to today, we have consistently produced toppers year after year — not because we chase ranks, but because we build genuine understanding.</p>
+          <div class="about-quote">
+            "Ravindra sir didn't just help me crack UPSC — he helped me understand why I wanted to serve. That clarity made all the difference."
+          </div>
+          <div class="about-founder">
+            <div class="founder-avatar">R</div>
+            <div class="founder-info">
+              <h5>Ravindra Kumar Singh</h5>
+              <span>Founder & Chief Mentor, Ex-IAS Officer</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== COURSES ===== -->
+<section class="courses" id="courses">
+  <div class="container">
+    <div class="courses-header reveal">
+      <span class="section-label">Programs & Courses</span>
+      <h2 class="section-title">Every Stage.<br>Every Aspirant. Covered.</h2>
+      <p class="section-sub">Structured programs designed for each phase of your UPSC journey — from foundation to final selection.</p>
+    </div>
+    <div class="courses-grid">
+      <!-- Featured -->
+      <div class="course-card featured reveal">
+        <div>
+          <div class="course-tag">⭐ Most Popular</div>
+          <h3 class="course-title">Comprehensive UPSC Foundation Program</h3>
+          <p class="course-desc">Our flagship end-to-end program covering the complete UPSC journey — Prelims, Mains and Interview — with dedicated mentorship at every stage.</p>
+          <div class="course-meta">
+            <span><i class="fas fa-clock"></i> 24 months</span>
+            <span><i class="fas fa-users"></i> Limited to 60 seats</span>
+            <span><i class="fas fa-video"></i> Hybrid (Online + Offline)</span>
+          </div>
+          <ul class="course-features">
+            <li>500+ hours of live classes by expert faculty</li>
+            <li>Weekly answer writing practice with detailed review</li>
+            <li>Personalized 1-on-1 mentorship sessions</li>
+            <li>Access to 3000+ curated study resources</li>
+          </ul>
+          <a href="#contact" class="btn-course">Enroll Now <i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="course-visual-block">
+          <div class="course-highlight-item">
+            <span class="chi">📚</span>
+            <div>
+              <h5>Prelims Mastery</h5>
+              <p>Full GS Paper 1 & CSAT coverage with 200+ topic tests</p>
+            </div>
+          </div>
+          <div class="course-highlight-item">
+            <span class="chi">✍️</span>
+            <div>
+              <h5>Mains Excellence</h5>
+              <p>Essay + GS Papers with model answer reviews</p>
+            </div>
+          </div>
+          <div class="course-highlight-item">
+            <span class="chi">🎤</span>
+            <div>
+              <h5>Interview Coaching</h5>
+              <p>Mock boards with retired IAS/IPS officers on panel</p>
+            </div>
+          </div>
+          <div class="course-highlight-item">
+            <span class="chi">🧭</span>
+            <div>
+              <h5>Doubt Resolution</h5>
+              <p>Daily live doubt sessions + Telegram support</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Individual Cards -->
+      <div class="course-card reveal">
+        <div class="course-tag">📋 Exam Focused</div>
+        <h3 class="course-title">Prelims Intensive Batch</h3>
+        <p class="course-desc">Razor-focused preparation targeting Prelims GS and CSAT with proven exam strategies, extensive MCQ practice, and weekly mock tests.</p>
+        <div class="course-meta">
+          <span><i class="fas fa-clock"></i> 6 months</span>
+          <span><i class="fas fa-signal"></i> Beginner–Intermediate</span>
+        </div>
+        <ul class="course-features">
+          <li>50 full-length Prelims mock tests</li>
+          <li>Topic-wise elimination strategy</li>
+          <li>Previous year paper analysis</li>
+          <li>Current affairs capsule monthly</li>
+        </ul>
+        <a href="https://docs.google.com/document/d/11TkPdnxhDA7q4ncvTFVSZqkyF1uiHEHdT_sHtVzWQFU/edit?usp=sharing" class="btn-course">View Details <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="course-card reveal">
+        <div class="course-tag">✍️ Writing Mastery</div>
+        <h3 class="course-title">Mains Answer Writing Program</h3>
+        <p class="course-desc">Transform your answer writing from average to exceptional. Daily practice, expert evaluation, and structured feedback to maximise your Mains score.</p>
+        <div class="course-meta">
+          <span><i class="fas fa-clock"></i> 8 months</span>
+          <span><i class="fas fa-signal"></i> Intermediate–Advanced</span>
+        </div>
+        <ul class="course-features">
+          <li>Evaluated answer copies with comments</li>
+          <li>GS 1, 2, 3, 4 + Essay + Optional</li>
+          <li>Value addition through maps and diagrams</li>
+          <li>Model answer discussions every week</li>
+        </ul>
+        <a href="https://docs.google.com/document/d/15feW9ASWs27oNblFIbow0wRe59WDbkx2dKGglG8I7DI/edit?usp=sharing" class="btn-course">View Details <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="course-card reveal">
+        <div class="course-tag">🎤 Final Stage</div>
+        <h3 class="course-title">Interview Guidance Program</h3>
+        <p class="course-desc">Structured preparation for the UPSC Personality Test — DAF-based mock interviews, board simulation, and communication skills development.</p>
+        <div class="course-meta">
+          <span><i class="fas fa-clock"></i> 2 months</span>
+          <span><i class="fas fa-signal"></i> Mains Qualified</span>
+        </div>
+        <ul class="course-features">
+          <li>5 full-length mock interview panels</li>
+          <li>DAF analysis and structuring</li>
+          <li>Body language and communication coaching</li>
+          <li>Current affairs discussion for interview</li>
+        </ul>
+        <a href="https://docs.google.com/document/d/1fpwiG4neLns_0iKedwPJ0YUop_jIO9BJ5YXfKptn3Rc/edit?usp=sharing" class="btn-course">View Details <i class="fas fa-chevron-right"></i></a>
+      </div>
+      <div class="course-card reveal">
+        <div class="course-tag">📐 Optional</div>
+        <h3 class="course-title">Optional Subject Mastery</h3>
+        <p class="course-desc">Deep-dive into your optional subject with top faculty — History, Geography, Political Science, Public Admin, Sociology and more.</p>
+        <div class="course-meta">
+          <span><i class="fas fa-clock"></i> 5–7 months</span>
+          <span><i class="fas fa-list"></i> 10+ subjects available</span>
+        </div>
+        <ul class="course-features">
+          <li>Subject-specific expert faculty</li>
+          <li>Full syllabus with diagram support</li>
+          <li>Section-wise tests and evaluation</li>
+          <li>Previous year question analysis</li>
+        </ul>
+        <a href="#contact" class="btn-course">View Details <i class="fas fa-chevron-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TIMELINE ===== -->
+<section class="timeline-section">
+  <div class="container">
+    <div class="timeline-header reveal">
+      <span class="section-label">Your UPSC Journey</span>
+      <h2 class="section-title">From Aspiration to<br>Selection — Step by Step</h2>
+    </div>
+    <div class="timeline-wrapper">
+      <div class="timeline-line"></div>
+      <div class="timeline-steps">
+        <div class="timeline-step">
+          <div class="ts-icon">📖</div>
+          <div class="ts-content">
+            <h4>Preparation</h4>
+            <p>Foundation, NCERTs, Current Affairs</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="ts-icon">📋</div>
+          <div class="ts-content">
+            <h4>Prelims</h4>
+            <p>GS Paper I & CSAT Cleared</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="ts-icon">✍️</div>
+          <div class="ts-content">
+            <h4>Mains</h4>
+            <p>9 Papers, Essay & GS Series</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="ts-icon">🎤</div>
+          <div class="ts-content">
+            <h4>Interview</h4>
+            <p>Personality Test & Board Panel</p>
+          </div>
+        </div>
+        <div class="timeline-step">
+          <div class="ts-icon">🏆</div>
+          <div class="ts-content">
+            <h4>Selection</h4>
+            <p>Final Merit List & Allocation</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESOURCES ===== -->
+<section class="resources" id="resources">
+  <div class="container">
+    <div class="resources-header reveal">
+      <span class="section-label">Study Resources</span>
+      <h2 class="section-title">Your Complete<br>Resource Hub</h2>
+      <p class="section-sub">Curated, updated, and designed for clarity — access everything you need for UPSC in one place.</p>
+    </div>
+    <div class="resources-grid">
+      <div class="resource-card reveal">
+        <div class="resource-icon">📰</div>
+        <h4>Daily Current Affairs</h4>
+        <p>Comprehensive daily analysis of relevant news with UPSC angle — PIB, The Hindu, IE covered.</p>
+        <div class="resource-tags"><span>Daily</span><span>Free Preview</span><span>PDF Available</span></div>
+        <a href="http://127.0.0.1:3000/current.html?serverWindowId=1623f29d-46ce-4470-98fd-9520cb9674fe" class="btn-resource">Access Now <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="resource-card reveal">
+        <div class="resource-icon">📝</div>
+        <h4>Comprehensive Notes</h4>
+        <p>Subject-wise notes covering the entire UPSC syllabus — handwritten format, value-added with diagrams and maps.</p>
+        <div class="resource-tags"><span>GS 1–4</span><span>Essay</span><span>Optional</span></div>
+        <a href="https://docs.google.com/document/d/1GDXjNPOzFEpUStIQvon8tNWczUt7jV8l4T2YaaW6b6c/edit?usp=sharing" class="btn-resource">Download  <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="resource-card reveal">
+        <div class="resource-icon">🧪</div>
+        <h4>Test Series</h4>
+        <p>UPSC-standard Prelims and Mains test series with detailed solutions, rank analysis, and performance dashboard.</p>
+        <div class="resource-tags"><span>200+ Tests</span><span>AI Analysis</span><span>Detailed Solutions</span></div>
+        <a href="#" class="btn-resource">Join Test Series <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="resource-card reveal">
+        <div class="resource-icon">🗺️</div>
+        <h4>Mind Maps & Diagrams</h4>
+        <p>Visual learning aids — mind maps, flowcharts, and infographics for complex topics in polity, economy and environment.</p>
+        <div class="resource-tags"><span>GS 2 & 3 Focus</span><span>Print Ready</span></div>
+        <a href="#" class="btn-resource">View Gallery <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="resource-card reveal">
+        <div class="resource-icon">🎥</div>
+        <h4>Video Lectures</h4>
+        <p>Pre-recorded high-quality video lectures on all static topics — watch at your own pace, pause and revisit anytime.</p>
+        <div class="resource-tags"><span>600+ Hours</span><span>HD Quality</span><span>Subtitles</span></div>
+        <a href="#" class="btn-resource">Watch Lectures <i class="fas fa-arrow-right"></i></a>
+      </div>
+      <div class="resource-card reveal">
+        <div class="resource-icon">🆓</div>
+        <h4>Free Starter Kit</h4>
+        <p>UPSC syllabus breakdown, 30-day study plan, booklist and beginner strategy guide — completely free.</p>
+        <div class="resource-tags"><span>100% Free</span><span>Instant Access</span></div>
+        <a href="#contact" class="btn-resource">Get Free Kit <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LIVE COUNTERS ===== -->
+<section class="counters" id="stats">
+  <div class="container">
+    <div class="counters-grid">
+      <div class="counter-item reveal">
+        <span><span class="counter" data-target="12000">0</span><span class="unit">+</span></span>
+        <div class="clabel">Students Enrolled</div>
+      </div>
+      <div class="counter-item reveal">
+        <span><span class="counter" data-target="3200">0</span><span class="unit">+</span></span>
+        <div class="clabel">UPSC Selections</div>
+      </div>
+      <div class="counter-item reveal">
+        <span><span class="counter" data-target="20">0</span><span class="unit"> Yrs</span></span>
+        <div class="clabel">Years of Excellence</div>
+      </div>
+      <div class="counter-item reveal">
+        <span><span class="counter" data-target="48">0</span><span class="unit">+</span></span>
+        <div class="clabel">IAS/IPS Officers Produced</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESULTS ===== -->
+<section class="results" id="results">
+  <div class="container">
+    <div class="results-header reveal">
+      <span class="section-label">Success Stories</span>
+      <h2 class="section-title">Our Toppers Speak<br>Louder Than Words</h2>
+      <p class="section-sub" style="margin:0 auto">Real results from real students — every name here represents a dream fulfilled and a life transformed.</p>
+    </div>
+    <div class="toppers-slider-wrapper">
+      <div class="toppers-slider" id="toppersSlider">
+        <div class="topper-card">
+          <div class="topper-avatar">A</div>
+          <div class="topper-rank">AIR 12 — IAS</div>
+          <h4>Ananya Krishnamurthy</h4>
+          <div class="batch">UPSC CSE 2023 | Batch 2021</div>
+          <p class="topper-quote">"The answer writing program at Ravindra IAS completely transformed my approach. My Mains score jumped by 180 marks in one attempt."</p>
+        </div>
+        <div class="topper-card">
+          <div class="topper-avatar">R</div>
+          <div class="topper-rank">AIR 34 — IPS</div>
+          <h4>Rahul Mehta</h4>
+          <div class="batch">UPSC CSE 2023 | Batch 2020</div>
+          <p class="topper-quote">"The faculty here doesn't just teach — they mentor. Ravindra sir's personal attention during my 3rd attempt made the decisive difference."</p>
+        </div>
+        <div class="topper-card">
+          <div class="topper-avatar">P</div>
+          <div class="topper-rank">AIR 67 — IFS</div>
+          <h4>Priya Nambiar</h4>
+          <div class="batch">UPSC CSE 2022 | Batch 2020</div>
+          <p class="topper-quote">"I was a first-generation civil services aspirant with no guidance. Ravindra IAS gave me a structured path and the confidence to walk it."</p>
+        </div>
+        <div class="topper-card">
+          <div class="topper-avatar">S</div>
+          <div class="topper-rank">AIR 89 — IAS</div>
+          <h4>Saurabh Tiwari</h4>
+          <div class="batch">UPSC CSE 2022 | Batch 2019</div>
+          <p class="topper-quote">"The test series evaluation was incredibly detailed. My examiner-specific writing weaknesses were identified early and corrected methodically."</p>
+        </div>
+        <div class="topper-card">
+          <div class="topper-avatar">M</div>
+          <div class="topper-rank">AIR 118 — IRS</div>
+          <h4>Meghna Varma</h4>
+          <div class="batch">UPSC CSE 2023 | Batch 2021</div>
+          <p class="topper-quote">"I attempted UPSC four times before joining here. Within one year of enrolling, I had cracked both Prelims and Mains. The current affairs program is exceptional."</p>
+        </div>
+        <div class="topper-card">
+          <div class="topper-avatar">V</div>
+          <div class="topper-rank">AIR 145 — IAS</div>
+          <h4>Vikrant Dubey</h4>
+          <div class="batch">UPSC CSE 2021 | Batch 2019</div>
+          <p class="topper-quote">"The mock interview panels with retired IAS officers were invaluable. They asked questions I didn't expect and helped me think on my feet."</p>
+        </div>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <button class="slider-btn" id="slidePrev"><i class="fas fa-chevron-left"></i></button>
+      <div class="slider-dots" id="sliderDots"></div>
+      <button class="slider-btn" id="slideNext"><i class="fas fa-chevron-right"></i></button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY CHOOSE US ===== -->
+<section class="why">
+  <div class="container">
+    <div class="why-header reveal">
+      <span class="section-label">Our Advantage</span>
+      <h2 class="section-title">Why 12,000+ Aspirants<br>Choose Ravindra IAS</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon">👨‍🏫</div>
+        <h4>Expert Faculty</h4>
+        <p>40+ subject-matter experts including retired IAS/IPS officers, domain PhDs, and experienced UPSC educators with proven track records.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🗂️</div>
+        <h4>Structured Curriculum</h4>
+        <p>Rigorously designed syllabus coverage that moves from concepts to applications — exactly mirroring how UPSC asks questions.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🧭</div>
+        <h4>1-on-1 Mentorship</h4>
+        <p>Every student gets a dedicated mentor — a personal guide who tracks progress, identifies gaps, and provides continuous support.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">📊</div>
+        <h4>Regular Testing</h4>
+        <p>500+ tests annually — from daily MCQ quizzes to full Prelims mocks and Mains answer writing — keeping you exam-ready year-round.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">🔄</div>
+        <h4>Always Updated</h4>
+        <p>Content updated daily by our research team. Current affairs, government reports, and UPSC notifications — nothing gets missed.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon">💻</div>
+        <h4>Hybrid Learning</h4>
+        <p>The flexibility to attend classes from Delhi classrooms OR from anywhere in India via our state-of-the-art online platform.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== MENTAL HEALTH & MOTIVATION ===== -->
+<section class="motivation">
+  <div class="container">
+    <div class="motivation-header reveal">
+      <span class="section-label">Aspirant Well-being</span>
+      <h2 class="section-title">Mind, Body &<br>Motivation — Together</h2>
+      <p class="section-sub" style="margin:0 auto">UPSC is a marathon. We take care of the whole person — not just the exam score.</p>
+    </div>
+    <div class="motivate-grid">
+      <div class="motivate-tip reveal">
+        <div class="emoji">🧘</div>
+        <h4>Stress Management</h4>
+        <p>Weekly virtual wellness sessions covering mindfulness, study-break routines, and burnout prevention strategies used by top performers.</p>
+      </div>
+      <div class="motivate-tip reveal">
+        <div class="emoji">💪</div>
+        <h4>Failure Recovery</h4>
+        <p>Our dedicated counsellors and senior alumni help students bounce back stronger after setbacks — because every great officer stumbled once.</p>
+      </div>
+      <div class="motivate-tip reveal">
+        <div class="emoji">🌱</div>
+        <h4>Growth Mindset Workshops</h4>
+        <p>Monthly sessions on study psychology, habit formation, and peak performance strategies tailored for UPSC aspirants.</p>
+      </div>
+    </div>
+    <div class="motivation-quote-box reveal">
+      <div id="motivate-quote">"The UPSC journey tests not just your knowledge, but your character. Trust the process."</div>
+      <div id="motivate-author">— Ravindra Kumar Singh, Founder</div>
+      <button class="btn-motivate" onclick="generateMotivation()">
+        <i class="fas fa-bolt"></i> Generate New Motivation
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ===== DOUBT SOLVER ===== -->
+<section class="doubt-section">
+  <div class="container">
+    <div class="doubt-inner">
+      <div class="doubt-header reveal">
+        <span class="section-label">Instant Help</span>
+        <h2 class="section-title">Live Doubt<br>Solving Centre</h2>
+        <p class="section-sub" style="margin:0 auto">Got a question about UPSC prep? Our AI assistant provides instant answers, 24/7.</p>
+      </div>
+      <div class="doubt-chat-box reveal">
+        <div class="doubt-chat-header">
+          <div class="status-dot"></div>
+          <span>Ravindra IAS Doubt Assistant</span>
+          <span class="small">Online • Avg reply: instant</span>
+        </div>
+        <div class="doubt-messages" id="doubtMessages">
+          <div class="dmsg bot">
+            <div class="dmsg-avatar">R</div>
+            <div class="dmsg-bubble">👋 Hello! I'm your UPSC doubt assistant. Ask me anything about the exam, syllabus, strategy, or our courses!</div>
+          </div>
+        </div>
+        <div class="doubt-quick-qs" id="doubtQuickQs">
+          <button class="dq-btn" onclick="askDoubt('How many attempts are allowed in UPSC?')">Attempts allowed?</button>
+          <button class="dq-btn" onclick="askDoubt('What is the UPSC syllabus for GS Paper 1?')">GS Paper 1 syllabus?</button>
+          <button class="dq-btn" onclick="askDoubt('How to start UPSC preparation from scratch?')">How to start prep?</button>
+          <button class="dq-btn" onclick="askDoubt('What is the difference between IAS and IPS?')">IAS vs IPS?</button>
+        </div>
+        <div class="doubt-input-row">
+          <input type="text" class="doubt-input" id="doubtInput" placeholder="Type your question about UPSC..." onkeydown="if(event.key==='Enter') sendDoubt()">
+          <button class="doubt-send" onclick="sendDoubt()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="faq">
+  <div class="container">
+    <div class="faq-inner">
+      <div class="faq-header reveal">
+        <span class="section-label">Frequently Asked</span>
+        <h2 class="section-title">Questions We<br>Hear Every Day</h2>
+      </div>
+      <div class="faq-list" id="faqList">
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>How do I enroll in a course at Ravindra IAS?</span>
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-a">
+            <p>You can enroll by filling out the contact form on this page, calling our helpline, or visiting our Delhi centre directly. Our counsellor will guide you through the right program based on your background, attempt number, and goals. Enrollment for new batches opens every quarter.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>What is the duration of each course?</span>
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-a">
+            <p>Our Foundation Program runs for 24 months. Prelims Intensive is 6 months, Mains Answer Writing is 8 months, Interview Guidance is 2 months, and Optional Subject programs are 5–7 months depending on the subject. All programs have clearly defined milestones and deliverables.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>Are classes available online as well as offline?</span>
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-a">
+            <p>Yes! We offer full hybrid learning — all classes are conducted live at our Delhi centre AND simultaneously streamed online. Recorded sessions are available for 90 days. Students from any part of India can access the complete program without relocating.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>Do you provide mentorship for repeat (second/third) attempt aspirants?</span>
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-a">
+            <p>Absolutely. In fact, many of our toppers cracked UPSC on their second or third attempt with us. We have a specific program for re-aspirants focused on identifying gaps, rebuilding strategy, and maximising efficiency. Our counsellors personally design a study plan for each re-attempting student.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>Is there a free trial or demo class available?</span>
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-a">
+            <p>Yes! We offer free demo classes for all major programs. You can attend one live session and access two weeks of study material before committing to enrollment. Contact our team to schedule your free demo and get a complimentary UPSC Starter Kit worth ₹2,000.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">
+            <span>What makes Ravindra IAS different from other coaching institutes?</span>
+            <div class="faq-icon"><i class="fas fa-plus"></i></div>
+          </div>
+          <div class="faq-a">
+            <p>Three things set us apart: personalized mentorship (every student gets a dedicated guide), rigorous answer writing focus (most students fail Mains — we fix that), and our student-first culture. We maintain small batches of 60 max to ensure quality, and our founder personally reviews performance reports monthly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-left reveal">
+        <span class="section-label">Enroll Today</span>
+        <h2>Your IAS Dream<br>Deserves the<br>Best Guidance.</h2>
+        <p>Take the first step. Fill out this form and our expert counsellor will call you back within 2 hours with a personalised program recommendation — completely free.</p>
+        <div class="trust-badges">
+          <div class="trust-badge">
+            <div class="tb-icon">🔒</div>
+            <div><span>Free Counselling Session</span> with senior faculty</div>
+          </div>
+          <div class="trust-badge">
+            <div class="tb-icon">🎁</div>
+            <div><span>Free UPSC Starter Kit</span> on enrollment</div>
+          </div>
+          <div class="trust-badge">
+            <div class="tb-icon">💳</div>
+            <div><span>EMI Options Available</span> — 0% interest</div>
+          </div>
+          <div class="trust-badge">
+            <div class="tb-icon">📞</div>
+            <div>Callback within <span>2 hours guaranteed</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-right reveal">
+        <div class="urgent-badge">
+          <span class="dot"></span>
+          Only 18 seats left in next batch — Batch starts April 5, 2026
+        </div>
+        <div class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>First Name</label>
+              <input type="text" placeholder="Rahul">
+            </div>
+            <div class="form-group">
+              <label>Last Name</label>
+              <input type="text" placeholder="Sharma">
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="you@email.com">
+          </div>
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="+91 98765 43210">
+          </div>
+          <div class="form-group">
+            <label>I'm Interested In</label>
+            <select>
+              <option value="">Select a program</option>
+              <option>Foundation Program (Complete UPSC)</option>
+              <option>Prelims Intensive Batch</option>
+              <option>Mains Answer Writing</option>
+              <option>Interview Guidance</option>
+              <option>Optional Subject</option>
+              <option>Free Counselling First</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Your Message (Optional)</label>
+            <textarea rows="3" placeholder="Tell us about your preparation status or any specific concerns..."></textarea>
+          </div>
+          <button class="btn-submit" onclick="submitForm(this)">
+            <i class="fas fa-paper-plane"></i> Claim Free Counselling Session
+          </button>
+          <p class="form-note">🔒 Your information is 100% secure. We never share your data.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="nav-logo">
+          <span class="logo-main">Ravindra IAS</span>
+          <span class="logo-tag">UPSC Excellence Since 2004</span>
+        </div>
+        <p>India's trusted UPSC coaching institute — shaping civil servants, building leaders, transforming lives for over two decades.</p>
+        <div class="footer-social">
+          <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-telegram"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h5>Quick Links</h5>
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#courses">Courses</a>
+        <a href="#results">Toppers</a>
+        <a href="#resources">Resources</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Programs</h5>
+        <a href="#courses">Foundation Program</a>
+        <a href="#courses">Prelims Batch</a>
+        <a href="#courses">Mains Writing</a>
+        <a href="#courses">Interview Prep</a>
+        <a href="#courses">Optional Subjects</a>
+        <a href="#resources">Test Series</a>
+      </div>
+      <div class="footer-col">
+        <h5>Contact Us</h5>
+        <div class="footer-contact-item"><i class="fas fa-map-marker-alt"></i> 14-A, Rajendra Nagar, New Delhi — 110060</div>
+        <div class="footer-contact-item"><i class="fas fa-phone"></i> +91 11 4567 8901</div>
+        <div class="footer-contact-item"><i class="fas fa-envelope"></i> info@ravindraias.com</div>
+        <div class="footer-contact-item"><i class="fas fa-clock"></i> Mon–Sat: 8 AM – 8 PM</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Ravindra IAS. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Refund Policy</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== CHATBOT ===== -->
+<a href="https://wa.me/911145678901" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">
+  <i class="fab fa-whatsapp"></i>
+</a>
+<button class="chatbot-toggle" onclick="toggleChatbot()" title="Chat with us">
+  <i class="fas fa-comments" id="chatIcon"></i>
+</button>
+<div class="chatbot-window" id="chatWindow">
+  <div class="chat-header">
+    <div class="av">R</div>
+    <div class="info">
+      <h5>Ravindra IAS Assistant</h5>
+      <span>Typically replies instantly</span>
+    </div>
+    <button class="close-chat" onclick="toggleChatbot()"><i class="fas fa-times"></i></button>
+  </div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="cmsg bot">
+      <div class="cmsg-bubble">👋 Hi! Welcome to Ravindra IAS. How can I help you today?</div>
+    </div>
+  </div>
+  <div class="chat-quick">
+    <button class="cq-btn" onclick="chatQuick('Tell me about your courses')">Courses</button>
+    <button class="cq-btn" onclick="chatQuick('How to enroll?')">Enroll</button>
+    <button class="cq-btn" onclick="chatQuick('Fees & EMI options?')">Fees</button>
+    <button class="cq-btn" onclick="chatQuick('Do you offer free demo?')">Free Demo</button>
+  </div>
+  <div class="chat-input-row">
+    <input type="text" class="chat-input" id="chatInput" placeholder="Type a message..." onkeydown="if(event.key==='Enter') sendChat()">
+    <button class="chat-send" onclick="sendChat()"><i class="fas fa-paper-plane"></i></button>
+  </div>
+</div>
+
+<!-- ===== JAVASCRIPT ===== -->
+<script>
+// ===== MODAL =====
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('loginModal').classList.remove('hidden');
+  }, 1500);
+});
+function closeModal() {
+  document.getElementById('loginModal').classList.add('hidden');
+}
+
+// ===== NAVBAR =====
+const navbar = document.getElementById('navbar');
+window.addEventListener('scroll', () => {
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+// ===== HAMBURGER =====
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('open');
+  mobileMenu.classList.toggle('open');
+});
+function closeMobile() {
+  hamburger.classList.remove('open');
+  mobileMenu.classList.remove('open');
+}
+
+// ===== DARK MODE =====
+const darkToggle = document.getElementById('darkToggle');
+const icon = darkToggle.querySelector('i');
+const savedTheme = localStorage.getItem('theme') || 'light';
+document.documentElement.setAttribute('data-theme', savedTheme);
+icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+darkToggle.addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-theme');
+  const next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  icon.className = next === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+});
+
+// ===== SCROLL REVEAL =====
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => {
+        entry.target.classList.add('visible');
+      }, (entry.target.dataset.delay || 0));
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach((el, i) => {
+  el.dataset.delay = (i % 4) * 80;
+  observer.observe(el);
+});
+
+// ===== TIMELINE REVEAL =====
+const tlObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      const steps = entry.target.querySelectorAll('.timeline-step');
+      steps.forEach((s, i) => setTimeout(() => s.classList.add('visible'), i * 150));
+      tlObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.2 });
+const tlWrapper = document.querySelector('.timeline-wrapper');
+if (tlWrapper) tlObserver.observe(tlWrapper);
+
+// ===== LIVE COUNTERS =====
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const section = entry.target;
+      section.querySelectorAll('.counter').forEach(el => {
+        const target = +el.dataset.target;
+        const duration = 1800;
+        const step = target / (duration / 16);
+        let current = 0;
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) { current = target; clearInterval(timer); }
+          el.textContent = Math.floor(current).toLocaleString('en-IN');
+        }, 16);
+      });
+      // also hero stats
+      section.querySelectorAll('[data-count]').forEach(el => {
+        const target = +el.dataset.count;
+        const duration = 1500;
+        const step = target / (duration / 16);
+        let current = 0;
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) { current = target; clearInterval(timer); }
+          el.textContent = Math.floor(current).toLocaleString('en-IN');
+        }, 16);
+      });
+      counterObserver.unobserve(section);
+    }
+  });
+}, { threshold: 0.3 });
+const counterSection = document.querySelector('.counters');
+if (counterSection) counterObserver.observe(counterSection);
+
+// Hero counter trigger on scroll
+const heroSection = document.querySelector('.hero');
+const heroCounterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      document.querySelectorAll('[data-count]').forEach(el => {
+        if (el.textContent === '0') {
+          const target = +el.dataset.count;
+          const step = target / (1800 / 16);
+          let current = 0;
+          const timer = setInterval(() => {
+            current += step;
+            if (current >= target) { current = target; clearInterval(timer); }
+            el.textContent = Math.floor(current);
+          }, 16);
+        }
+      });
+      heroCounterObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.4 });
+if (heroSection) heroCounterObserver.observe(heroSection);
+
+// ===== FAQ ACCORDION =====
+function toggleFaq(el) {
+  const item = el.parentElement;
+  const isOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+  if (!isOpen) item.classList.add('open');
+}
+
+// ===== TOPPERS SLIDER =====
+const slider = document.getElementById('toppersSlider');
+const dotsContainer = document.getElementById('sliderDots');
+let sliderIndex = 0;
+const cardMinWidth = () => {
+  const w = window.innerWidth;
+  if (w <= 768) return 0.85;
+  return 0.3333;
+};
+const totalCards = 6;
+const visibleCards = () => window.innerWidth <= 768 ? 1 : 3;
+const maxIndex = () => totalCards - visibleCards();
+
+// Create dots
+for (let i = 0; i <= maxIndex(); i++) {
+  const dot = document.createElement('div');
+  dot.className = 'slider-dot' + (i === 0 ? ' active' : '');
+  dot.onclick = () => goToSlide(i);
+  dotsContainer.appendChild(dot);
+}
+
+function goToSlide(index) {
+  sliderIndex = Math.max(0, Math.min(index, maxIndex()));
+  const cardW = slider.children[0].offsetWidth + 20;
+  slider.style.transform = `translateX(-${sliderIndex * cardW}px)`;
+  document.querySelectorAll('.slider-dot').forEach((d, i) => {
+    d.classList.toggle('active', i === sliderIndex);
+  });
+}
+document.getElementById('slideNext').onclick = () => goToSlide(sliderIndex + 1);
+document.getElementById('slidePrev').onclick = () => goToSlide(sliderIndex - 1);
+let autoSlide = setInterval(() => goToSlide((sliderIndex + 1) % (maxIndex() + 1)), 4000);
+slider.parentElement.addEventListener('mouseenter', () => clearInterval(autoSlide));
+slider.parentElement.addEventListener('mouseleave', () => {
+  autoSlide = setInterval(() => goToSlide((sliderIndex + 1) % (maxIndex() + 1)), 4000);
+});
+
+// ===== MOTIVATION QUOTES =====
+const quotes = [
+  { q: "Success is not the key to happiness. Happiness is the key to success. If you love what you are doing, you will be successful.", a: "— Albert Schweitzer" },
+  { q: "The UPSC journey is not just about becoming an IAS. It is about becoming someone worthy of that responsibility.", a: "— Ravindra Kumar Singh, Founder" },
+  { q: "Every topper was once a beginner who refused to quit. Your rank in the merit list is directly proportional to how hard you work today.", a: "— UPSC Wisdom" },
+  { q: "Don't compare your Chapter 1 to someone else's Chapter 20. Your journey is your own — trust the timeline.", a: "— Mentor's Note" },
+  { q: "The civil services exam doesn't test your intelligence alone. It tests your discipline, your patience, and your purpose.", a: "— Former IAS Officer" },
+  { q: "Failure is just the universe's way of redirecting you toward a better strategy. Analyse, adapt, and attack again.", a: "— Ravindra IAS Alumni" },
+  { q: "One year of focused, intelligent preparation beats three years of scattered effort. Quality over quantity, always.", a: "— Study Strategy Note" },
+  { q: "The officer you become depends entirely on the aspirant you choose to be today. Choose well.", a: "— Ravindra Kumar Singh" }
+];
+let quoteIdx = 0;
+function generateMotivation() {
+  quoteIdx = (quoteIdx + 1) % quotes.length;
+  const qEl = document.getElementById('motivate-quote');
+  const aEl = document.getElementById('motivate-author');
+  qEl.style.opacity = 0;
+  aEl.style.opacity = 0;
+  setTimeout(() => {
+    qEl.textContent = `"${quotes[quoteIdx].q}"`;
+    aEl.textContent = quotes[quoteIdx].a;
+    qEl.style.opacity = 1;
+    aEl.style.opacity = 1;
+  }, 300);
+}
+
+// ===== DOUBT SOLVER =====
+const doubtResponses = {
+  default: "That's a great question! Our expert counsellors can give you a detailed answer. Please fill out the enrollment form or call us at +91 11 4567 8901.",
+  "attempts": "General category candidates get 6 attempts (up to age 32). OBC candidates get 9 attempts (up to 35), and SC/ST candidates have unlimited attempts until age 37.",
+  "gs paper 1": "GS Paper 1 covers Indian Heritage & Culture, History, Geography of the World and Society. It includes Modern History, Ancient & Medieval History, Indian Society, and Physical/Human Geography.",
+  "start": "Start with NCERTs (Class 6–12) for History, Geography, Economy, and Polity. Then move to standard references like Laxmikanth for Polity, Ramesh Singh for Economy. Begin current affairs from Day 1.",
+  "ias": "IAS (Indian Administrative Service) officers handle district administration, policy implementation and district governance. IPS handles police and law enforcement. IAS is typically considered the most sought-after service.",
+  "fees": "Our program fees vary by course. The Foundation Program starts at ₹1,20,000 (EMI available). Free demo and counselling sessions are available. Call us for exact fee details.",
+  "online": "Yes! All our classes are available both offline (Delhi centre) and live online. Recordings are available for 90 days. You can attend from anywhere in India.",
+  "syllabus": "The UPSC syllabus is vast but structured. It includes GS Paper 1 (History, Geography, Society), GS Paper 2 (Polity, Governance, IR), GS Paper 3 (Economy, Environment, Science), GS Paper 4 (Ethics), Essay, and your Optional Subject.",
+};
+function getDoubtAnswer(q) {
+  const ql = q.toLowerCase();
+  for (const key in doubtResponses) {
+    if (key !== 'default' && ql.includes(key)) return doubtResponses[key];
+  }
+  return doubtResponses.default;
+}
+function addDoubtMsg(text, type) {
+  const el = document.createElement('div');
+  el.className = `dmsg ${type}`;
+  el.innerHTML = `<div class="dmsg-avatar">${type === 'bot' ? 'R' : 'Y'}</div><div class="dmsg-bubble">${text}</div>`;
+  const msgs = document.getElementById('doubtMessages');
+  msgs.appendChild(el);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+function askDoubt(q) { sendDoubt(q); }
+function sendDoubt(preQ) {
+  const inp = document.getElementById('doubtInput');
+  const q = preQ || inp.value.trim();
+  if (!q) return;
+  addDoubtMsg(q, 'user');
+  inp.value = '';
+  setTimeout(() => addDoubtMsg(getDoubtAnswer(q), 'bot'), 600);
+}
+
+// ===== CHATBOT =====
+const chatResponses = {
+  "courses": "We offer: Foundation Program (24 months), Prelims Batch (6 months), Mains Writing (8 months), Interview Guidance (2 months), and Optional Subjects. Visit our Courses section for details!",
+  "enroll": "To enroll: fill the Contact form on this page, or call +91 11 4567 8901. Our counsellor will guide you and schedule a free demo class.",
+  "fees": "Fees vary by program. Foundation starts at ₹1,20,000 with 0% EMI options available. Fill the contact form to get exact pricing and scholarship info.",
+  "demo": "Yes! We offer free demo classes and a complimentary UPSC Starter Kit. Fill the form on this page and we'll schedule your demo within 24 hours.",
+  default: "Thanks for reaching out! For detailed help, please call +91 11 4567 8901 or fill the enrollment form below. Our counsellor will assist you personally."
+};
+function getChatReply(msg) {
+  const ml = msg.toLowerCase();
+  for (const key in chatResponses) {
+    if (key !== 'default' && ml.includes(key)) return chatResponses[key];
+  }
+  return chatResponses.default;
+}
+function addChatMsg(text, type) {
+  const el = document.createElement('div');
+  el.className = `cmsg ${type}`;
+  el.innerHTML = `<div class="cmsg-bubble">${text}</div>`;
+  const msgs = document.getElementById('chatMessages');
+  msgs.appendChild(el);
+  msgs.scrollTop = msgs.scrollHeight;
+}
+function chatQuick(msg) {
+  addChatMsg(msg, 'user');
+  setTimeout(() => addChatMsg(getChatReply(msg), 'bot'), 500);
+}
+function sendChat() {
+  const inp = document.getElementById('chatInput');
+  const msg = inp.value.trim();
+  if (!msg) return;
+  chatQuick(msg);
+  inp.value = '';
+}
+function toggleChatbot() {
+  const win = document.getElementById('chatWindow');
+  const ico = document.getElementById('chatIcon');
+  const isOpen = win.classList.toggle('open');
+  ico.className = isOpen ? 'fas fa-times' : 'fas fa-comments';
+}
+
+// ===== FORM SUBMIT =====
+function submitForm(btn) {
+  btn.innerHTML = '<i class="fas fa-check"></i> We\'ll call you back shortly!';
+  btn.style.background = 'linear-gradient(135deg, #2d9966, #1a7a4e)';
+  btn.disabled = true;
+}
+
+// ===== SMOOTH ACTIVE NAV =====
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 100) current = s.getAttribute('id');
+  });
+  navLinks.forEach(a => {
+    a.style.color = a.getAttribute('href') === '#' + current ? 'var(--accent-gold)' : '';
+  });
+});
+</script>
+</body>
+</html>
